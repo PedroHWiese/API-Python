@@ -1,0 +1,50 @@
+
+#API DE CADASTRO DE JOGOS
+#Download do PostMAn
+
+#localhost
+
+
+""" 
+localhost/jogos (GET)
+localhost/jogos/id (GET)
+localhost/jogos/id (PUT)
+localhost/jogos (DELETE) 
+"""
+
+
+
+plano
+construir o banco de dados dos jogos
+implementar o crud nele
+fazer o servidor que vai rodar o crud
+implementar o menu de opções (?)
+instalar o jest e fazer os comandos de teste dele 
+
+""" # Consultar(id)
+@app.route('/jogos/<int:id>',methods=['GET'])
+def obter_jogo_por_id(id):
+    for jogo in jogos:
+        if jogo.get('id') == id:
+            return jsonify(jogo)
+        
+
+
+# Editar
+@app.route('/jogos/<int:id>',methods=['PUT'])
+def editar_jogo_por_id(id):
+    jogo_alterado = request.get_json()
+    for indice,jogo in enumerate(jogos):
+        if jogo.get('id') == id:
+            jogos[indice].update(jogo_alterado)
+            return jsonify(jogos[indice])
+
+
+# Excluir
+@app.route('/jogos/<int:id>',methods=['DELETE'])
+def excluir_jogo(id):
+    for indice, jogo in enumerate(jogos):
+        if jogo.get('id') == id:
+            del jogos[indice]
+
+    return jsonify(jogos) """
